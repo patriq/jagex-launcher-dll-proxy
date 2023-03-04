@@ -1,0 +1,3 @@
+[submodule "deps/PolyHook_2_0"]
+	path = deps/PolyHook_2_0
+	url = https://github.com/stevemk14ebr/PolyHook_2_0
