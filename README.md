@@ -8,7 +8,12 @@ yours.
 Was tired of typing my password and didn't want to reverse engineer the Jagex Launcher to see how they did oauth2, so
 decided to just hook into `CreateProcessW` and have the launcher feed me the environment variables.
 
-### How to set the custom command
+### Clone
+```
+git clone --recurse-submodules https://github.com/patriq/jagex-launcher-dll-proxy
+```
+
+### Set the custom command
 
 1. Right now it's embedded in the DLL, so you'll have to compile it yourself.
 2. Modify the `CUSTOM_LAUNCHER_COMMAND` macro in the main.cc file.
@@ -21,7 +26,7 @@ decided to just hook into `CreateProcessW` and have the launcher feed me the env
 3. Should look [something like this](https://i.imgur.com/3MoXGaJ.png).
 4. Launch the Jagex Launcher, and try to press the play button to see if launches your custom command.
 
-### How to build
+### Build
 
 1. Used Visual Studio 2019 to build.
 2. Make sure to use the x86 Release configuration since the DLL is 32-bit.
